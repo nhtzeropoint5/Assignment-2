@@ -35,6 +35,7 @@
     color: var(--color-white);
     font-size: 3rem;
     font-weight: 800;
+    margin-bottom: 10px;
 }
 
 i{
@@ -187,7 +188,7 @@ button{
 /* about section */
 .about{
     background-color: var(--color-dark-blu);
-    padding: 50px 150px;
+    padding: 90px 150px 110px;
 }
 
 .about-container{
@@ -211,7 +212,58 @@ font-weight: 900;
 color: var(--color-green);
 }
 
+/* choose section */
+.big-container{
+    flex-direction: column;
+    gap:40px;
+    padding: 120px 200px;
+    text-align: center;
+}
 
+.choose{
+    background-color: var(--color-l-dark-blu);
+}
+
+
+.grid-card{
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+    "card1 card2 card2"
+    "card1 card3 card3"
+    "card4 card4 card5";
+}
+
+#card-1{
+    grid-area: card1;
+}
+#card-2{
+    grid-area: card2;
+}
+#card-3{
+    grid-area: card3;
+}
+#card-4{
+    grid-area: card4;
+}
+#card-5{
+    grid-area: card5;
+}
+
+
+.card{
+    color: var(--color-white);
+    padding: 45px 42px;
+  
+    background-color: var(--color-card-blu);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+     align-items: flex-start;
+     justify-content: space-between;
+    gap:15px;
+   
+}
 
 
 
@@ -226,11 +278,11 @@ color: var(--color-green);
 
 @media screen and (max-width:576px) {
     
-.section-heading{
-    font-size: 1rem;
-    font-weight: 800;
-}
 
+ .section-heading{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}   
 .navbar{
     justify-content: space-between;
     align-items: flex-start;
@@ -278,9 +330,7 @@ color: var(--color-green);
 .banner h1{
     font-size: 3rem;
 }
-
-
-/* about section */
+/* about resp */
 
 .fact-card{
     align-items: center;
@@ -294,7 +344,7 @@ color: var(--color-green);
     place-items: unset;
 }
 .about{
-    padding: 10px 60px;
+    padding: 50px 60px;
 }
 
 .about-container p{
@@ -307,6 +357,27 @@ font-size: 2rem;
 font-weight: 900;
 color: var(--color-green);
 }
+
+/* grid resp */
+.big-container{
+    padding: 30px 33px;
+    text-align: center;
+}
+.grid-card{
+    gap: 20px;
+    grid-template-areas: 
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5";
+}
+.grid-card p{
+text-align: start;
+}
+
+
+
 }
 
 @media screen and (min-width: 577px) and (max-width: 1140px){
