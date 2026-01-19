@@ -50,20 +50,7 @@ i{
     border: 2px solid var(--color-green);
 }
 
-.btn-glow {
-    position: absolute;
-    top:15.5%;
-    right:43%;
-    padding: 8px 16px;
-    background-color: #00FF88;
-    color: #0A0B2E;
-    font-size: 1rem;
-    font-weight: 700;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 3px 27px 0 rgba(0, 255, 136, 0.5);
-    cursor: pointer;
-}
+
 
 /* shared styles */
 button{
@@ -109,18 +96,50 @@ button{
 
 .banner{
     background-image: url('assets/hero-bg.png');
-    padding: 100px 525px 100px 470px;
-    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
 }
+
+.btn-glow {
+    position: absolute;
+    top:14%;
+    right:30%;
+    padding: 8px 16px;
+    background-color: #00FF88;
+    color: #0A0B2E;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 3px 27px 0 rgba(0, 255, 136, 0.5);
+    cursor: pointer;
+}
+
 .banner .banner-container{
     text-align: center;
+    position: relative;
+    margin-left:25%;
+    margin-right: 25% ;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
-.front-img{
+
+ .banner .front-img{
     position: absolute;
     /* left: 46.25rem;
     bottom: 25rem; */
-  left: 45%;
-  top: 26%;
+    left: 43%;
+    top: 24%;
+
+}
+.banner h1{
+    font-size: 4rem;
+}
+.banner p{
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .banner p{
@@ -162,6 +181,31 @@ button{
     display: block;
     color: var(--color-white);
     padding-top: 30px;
+    font-size: 1rem;
+}
+.front-back{
+    transform: scale(0.71);
+    z-index: 1;
+}
+.front-img{
+  position: absolute;
+  transform: scale(0.71) translate(-35%, -30%);
+  z-index: 2;
+
+}
+.banner .banner-container{
+    margin-left:10%;
+    margin-right: 10% ;
+    padding-top: 0;
+    padding-bottom: 5%;
+}
+.btn-glow{
+    z-index: 10;
+    top:10%;
+    right:28%;
+}
+.banner h1{
+    font-size: 3rem;
 }
 
 }
@@ -185,6 +229,32 @@ button{
     display: block;
     color: var(--color-white);
     padding-top: 30px;
+    font-size: 2rem;
+}
+.front-back{
+    transform: scale(0.71);
+    z-index: 1;
+}
+
+.front-img{
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  transform: scale(0.71) translate(10%, -36%);
+  z-index: 2;
+
+}
+
+.btn-glow{
+    z-index: 10;
+    position: absolute;
+    right:36%;
+}
+.banner .banner-container{
+    margin-left:10%;
+    margin-right: 10% ;
+    padding-top: 0;
+    padding-bottom: 5%;
 }
 
 }
