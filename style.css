@@ -9,9 +9,7 @@
 *{
     margin: 0;
     padding: 0;
-    /* width:100%;
-    min-height: 100%;
-    overflow-x: hidden; */
+    /*overflow-x: hidden; */
     box-sizing: border-box;
 }
 
@@ -74,6 +72,69 @@ i{
 }
 
 
+ @keyframes rota {
+  0% {
+    transform: rotate( 0deg ) scale( 1 );
+  }
+  
+  30% {
+    transform: rotate(360deg ) scale( 1.1 ) translate(5px, 0);
+    transition: transform 2s;
+  }
+  60% {
+    transform: rotate(360deg ) scale( 1 );
+  }
+  70% {
+    transform: rotate(360deg ) scale( 1 );
+  }
+  90% {
+    transform: rotate(360deg ) scale( 1 );
+  }
+  100% {
+    transform: rotate(360deg ) scale( 1 );
+  }
+}
+
+@keyframes bg-wave{
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+ .anime{
+  background: linear-gradient(90deg, #8f18c6, #ffd700, #ff00aa);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   display: inline-block;
+   animation: bg-wave 6s ease infinite, rota 4s 5s infinite;
+}
+
+
+
+@keyframes glow {
+  0% {
+    box-shadow:
+      0 0 0 rgba(0, 255, 136, 0.6),
+      0 0 10px rgba(0, 255, 136, 0.4);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow:
+      0 0 20px rgba(0, 255, 136, 0.8),
+      0 0 40px rgba(0, 255, 136, 0.6);
+    transform: scale(1.05);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 rgba(0, 255, 136, 0.6),
+      0 0 10px rgba(0, 255, 136, 0.4);
+    transform: scale(1);
+  }
+}
+
 /* shared styles */
 header{
     margin-bottom: 0;
@@ -133,7 +194,7 @@ button{
     width: 100%;
 }
 
-.btn-glow {
+ .btn-glow {
     position: absolute;
     top:8%;
     right:10%;
@@ -144,8 +205,10 @@ button{
     font-weight: 700;
     border: none;
     border-radius: 20px;
-    box-shadow: 0 3px 27px 0 rgba(0, 255, 136, 0.5);
+    box-shadow: 0 0 0 rgba(0, 255, 136, 0.6);
+    animation: glow 2.8s ease-in-out infinite;
     cursor: pointer;
+    
 }
 
 .banner .banner-container{
@@ -160,29 +223,42 @@ button{
 }
 
 .banner .img-container{
-    position: relative;
-       margin: 0 29%;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
+.front-back{
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
 
 .img-container .front-img{
-    position: absolute;
-    left: 35%;
-    top: 24%;
+  position: absolute;
+  bottom: -8%;
+  /* top: -%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%) scale(0.85); */
+  z-index: 2;
+  
 
 
 }
-.img-container .front-back{
+.img-container img{
 
- width: 100%;
- height: 100%;
- object-fit: cover;
+width: 100%;
+height: auto; 
+display: block;
+
 }
 
 
 .banner h1{
     font-size: 3.8rem;
-    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 
@@ -325,6 +401,7 @@ color: var(--color-green);
     justify-content: flex-start;
     overflow: hidden;
     margin: 40px;
+   
 }
 .photo-card h3{
     font-size: 2rem;
@@ -411,21 +488,21 @@ color: var(--color-green);
 }
 
 /* banner section scale(0.7) */
-.front-back{
+/* .front-back{
     transform:  translate(0, 10%);
     z-index: 1;
 }
-/* 
+ 
 .img-container{
     display:grid;
     place-items: center;
-} */
-
-.front-img{
-  transform: scale(0.5) translate(-70%, -30%);
-  z-index: 2;
-
 }
+*/
+
+.front-img{ 
+  transform: scale(0.9);
+
+} 
 .banner .banner-container{
     margin-left:10%;
     margin-right: 10% ;
@@ -496,6 +573,9 @@ text-align: start;
     gap: 30px;
 }
 /* host section / */
+.photo-card img{
+     transform: scale(0.85);
+}
 
 .photo-card{
     padding: 25px 25px 30px 25px;
@@ -563,8 +643,10 @@ gap: 10px;
     padding-top: 30px;
     font-size: 2rem;
 }
-.front-back{
-    /* transform: scale(0.71); */
+
+/* transform: scale(0.71);*/
+/* .front-back{
+    
     z-index: 1;
 }
 
@@ -574,7 +656,7 @@ gap: 10px;
   transform: scale(0.71) translate(-10%, 0%);
   z-index: 2;
 
-}
+} */
 
 .btn-glow{
     z-index: 10;
@@ -597,6 +679,10 @@ gap: 10px;
     padding: 30px 33px;
     text-align: center;
 }
+.photo-card img{
+     transform: scale(0.85);
+}
+
 .host-container{
     gap:20px;
     padding: 10px 0;
